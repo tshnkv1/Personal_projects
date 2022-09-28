@@ -1,0 +1,258 @@
+:root {
+    /* fonts */
+    --font-default: 'Poppins', sans-serif;
+    --font-weight-default: 400;
+    --font-size-default: 16px;
+    --font-size-light: 12px;
+
+
+    /* sizes */
+    /*--card-width: 50%;*/
+    /*--card-min-height: 300px;*/
+
+    /* colors */
+    --color-white: white;
+    --color-black: #000000;
+    --color-gray: #5f5f5f;
+    --color-light-gray: #F7F7F7;
+    --color-light-red: #f12346;
+
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+h1, h2 {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-default);
+    font-weight: var(--font-weight-default);
+    font-size: var(--font-size-default);
+}
+
+h3 {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-default);
+    font-weight: var(--font-weight-default);
+    font-size: var(--font-size-light);
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    list-style: none;
+}
+
+section {
+    padding: 2rem 0;
+}
+
+.container {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.custom-calendar {
+    display: flex;
+    align-items: center;
+}
+
+/*.custom-calendar > div {*/
+/*    padding: 0.5rem 1rem;*/
+/*}*/
+
+.date-info {
+    min-width: 210px;
+    display: flex;
+    padding: 0.5rem 1rem;
+    border: 2px solid var(--color-black);
+    cursor: pointer;
+}
+
+.date-info__image {
+    display: inline-block;
+    margin-right: 0.5rem;
+}
+
+.date-info__description {
+    line-height: 95%;
+}
+
+.date-info__description > h3,
+.custom-calendar-location > h2,
+.calendar-control-btn__title > h2 {
+    color: var(--color-gray);
+}
+
+.custom-calendar-location {
+    padding: 0.5rem 1rem;
+}
+
+.control-button {
+    position: relative;
+    width: 54px;
+}
+
+.control-button > input {
+    display: none;
+}
+
+.control-button::after {
+    content: "";
+    width: 50px;
+    height: 25px;
+    border: 2px solid var(--color-light-red);
+    border-radius: 15px;
+    position: absolute;
+    top: -13px;
+    left: 0;
+    cursor: pointer;
+}
+
+.control-button::before {
+    content: "";
+    width: 21px;
+    height: 21px;
+    background: var(--color-light-red);
+    border-radius: 50%;
+    position: absolute;
+    top: -9px;
+    lefT: 5px;
+}
+
+.control-button.active::before {
+    left: unset;
+    right: 5px;
+}
+
+/* calendar view */
+
+.calendar-view {
+    display: none;
+    width: max-content;
+    max-height: 313px;
+    padding: 1rem 1rem 0.25rem 0;
+    border: 2px solid var(--color-light-gray);
+}
+
+.calendar-view.active {
+    display: flex;
+}
+
+.calendar {
+    min-width: 290px;
+    padding-right: 1rem;
+}
+
+.calendar-control-btn {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calendar-control-btn__previous {
+    position: absolute;
+    top: -1px;
+    left: 1rem;
+    transform: rotate(-180deg);
+    cursor: pointer;
+}
+
+.calendar-control-btn__next {
+    position: absolute;
+    right: 1rem;
+    cursor: pointer;
+}
+
+/*.calendar-table > table {*/
+/*    width: 100%;*/
+/*}*/
+
+.calendar-table > table > th,
+.calendar-table > table > td {
+    display: grid;
+    grid-template-columns: repeat(7, 14.29%);
+    font-family: var(--font-default);
+    font-weight: var(--font-weight-default);
+    font-size: var(--font-size-default);
+}
+
+.calendar-table > table tr {
+    padding: 0.5rem;
+    display: flex;
+    justify-content: center;
+}
+
+.calendar-table__header {
+    background: var(--color-light-gray);
+}
+
+.calendar-table__item.no-active {
+    color: var(--color-light-gray);
+}
+
+.calendar-table__item.active {
+    background: var(--color-black);
+    color: var(--color-white);
+}
+
+.calendar-table__item.active:hover {
+    background: var(--color-black);
+}
+
+.calendar-table__item {
+    cursor: pointer;
+}
+
+.calendar-table__item:hover {
+    background: var(--color-light-gray);
+}
+
+.time-list {
+    min-width: 150px;
+    display: flex;
+    flex-direction: column;
+    font-family: var(--font-default);
+    font-weight: var(--font-weight-default);
+    font-size: var(--font-size-default);
+    overflow: auto;
+}
+
+.time-list__item {
+    padding: 0.5rem;
+    border-bottom: 2px solid var(--color-light-gray);
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.time-list__item:hover {
+    background: var(--color-light-gray);
+}
+
+
+.time-list__item.active {
+    background: var(--color-black);
+    color: var(--color-white);
+    border: none;
+}
+
+
+
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+}

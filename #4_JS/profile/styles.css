@@ -1,0 +1,166 @@
+:root {
+  /* fonts */
+  --font-default: 'Roboto', sans-serif;
+  --font-weight-default: 400;
+  --font-size-default: 14px;
+  --font-size-title: 34px;
+  
+
+  /* sizes */
+  --card-width: 50%;
+  --card-min-height: 300px;
+
+  /* colors */
+  --color-white: white;
+  --color-gray: darkgray;
+  --color-light-gray: #E0E0E0;
+  --color-gradient: linear-gradient(90deg, rgba(223,201,241,1) 0%, rgba(206,174,233,1) 8%, rgba(125,250,255,1) 37%);
+  --color-light-blue: cornflowerblue;
+
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--color-gray);
+}
+
+input[type="text"],
+input::placeholder {
+  font-family: var(--font-default);
+  font-size: var(--font-size-default);
+  font-weight: var(--font-weight-default);
+  color: var(--color-gray);
+}
+
+.container {
+  width: var(--card-width);
+  margin: 1rem auto;
+}
+
+.user-card {
+  min-height: var(--card-min-height);
+  display: flex;
+  margin-bottom: 3rem;
+  -webkit-box-shadow: 0 0 24px 2px rgba(66, 68, 90, 1);
+  -moz-box-shadow: 0 0 24px 2px rgba(66, 68, 90, 1);
+  box-shadow: 0 0 24px 2px rgba(66, 68, 90, 1);
+}
+
+/*  */
+.user-card__foto {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  background: var(--color-gradient);
+ 
+}
+
+.user-card__info {
+  flex: 3;
+  background: var(--color-white);
+}
+
+.user-avatar {
+  width: 40%;
+  padding: 2rem;
+}
+
+.user-avatar > img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+
+.user-card__info {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 3rem 2rem;
+}
+
+.user-card__title {
+  font-family: var(--font-default);
+  font-size: var(--font-size-title);
+  font-weight: var(--font-weight-default);
+  color: var(--color-gray);
+  margin: 2rem 0;
+}
+
+.user-card__description {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-card__description > div {
+  min-height: 28px;
+  display: flex;
+  align-items: center;
+  margin: 0.5rem 0;
+  overflow: hidden;
+  border: 0.5px solid var(--color-light-gray);
+  border-radius: 4px;
+}
+
+.user-card__description > div > img {
+  width: 12px;
+  margin: 0 0.75rem;
+}
+
+.user-card__description > div > label {
+  position: relative;
+  min-width: 80px;
+  font-family: var(--font-default);
+  font-size: var(--font-size-default);
+  font-weight: var(--font-weight-default);
+  color: var(--color-gray);
+  padding: 0.5rem 0;
+}
+
+.user-card__description > div > label::after {
+  content: '';
+  position: absolute;
+  top: 16px;
+  left: 9px;
+  width: 50px;
+  height: 50px;
+  transform: skew(-37deg, 48deg);
+  transform-origin: 100% 50%;
+  border-top: 0.5px solid var(--color-light-gray);
+  border-right: 0.5px solid var(--color-light-gray);
+}
+
+.user-card__description > div > input {
+  flex: 1;
+  height: 100%;
+  padding: 0 1rem;
+  border: none;
+}
+
+
+/* control button */
+
+.control-button {
+  display: flex;
+  justify-content: center;
+}
+
+button.random-user {
+  padding: 1rem 2rem;
+  border: none;
+  background: var(--color-light-blue);
+  color: var(--color-white);
+  border-radius: 10px;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+button.random-user:hover {
+  background: var(--color-gradient);
+  color: var(--color-light-blue);
+}
+
+
+
+
+
+

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet">
+    <title>Profile page</title>
+</head>
+<body>
+    <main>
+        <section>
+          <div class="container">
+          <div class="user-card">
+          <div class="user-card__foto">
+            <div class="user-avatar">
+                <img id="user-avatar" src="./assets/images/user-avatar.jpg" alt="avatar" />
+            </div>
+          </div>
+          <div class="user-card__info">
+            <h1 id="user-card__title" class="user-card__title">Welcome Anonymous !</h1>
+            <form class="user-card__description">
+                <div class="user-name">
+                    <img src="./assets/svg/icon_customers.svg" />
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="User name">
+                </div>
+                <div class="user-surname">
+                    <img src="./assets/svg/icon_customers.svg" />
+                    <label for="surname">Surname</label>
+                    <input type="text" id="surname" name="surname" placeholder="User surname">
+                </div>
+                <div class="user-birth-date">
+                    <img src="./assets/svg/icon_calendar.svg" />
+                    <label for="date">Birth date</label>
+                    <input type="text" id="date" name="date" placeholder="User birth date">
+                </div>
+                <div class="user-location">
+                    <img src="./assets/svg/icon_location.svg" />
+                    <label for="location">Location</label>
+                    <input type="text" id="location" name="location" placeholder="User location">
+                </div>
+              </form>
+          </div>
+          </div>
+          <div class="control-button">
+            <button id="random-user" class="random-user">Random user</button>
+          </div>
+          </div>
+        </section>
+      </main>
+      <script src="index.js"></script>
+</body>
+</html>

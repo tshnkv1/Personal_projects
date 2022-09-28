@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="calendar.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <title>Calendar</title>
+</head>
+<body>
+    <main>
+        <section>
+            <div class="container">
+                <div class="custom-calendar">
+                    <div id="date-info" class="date-info">
+                        <img class="date-info__image" src="./icons/icon_calendar.svg" />
+                        <div class="date-info__description">
+                            <h3>Drop Off Date, Time</h3>
+                            <h1 id="selected-region-time">Loading...</h1>
+                        </div>
+                    </div>
+                    <div class="custom-calendar-location location-default">
+                        <h2>Warsaw , Poland</h2>
+                    </div>
+                    <div  id="switch" class="control-button">
+                        <input class="control-button__switch" type="checkbox" name="location">
+                    </div>
+                    <div class="custom-calendar-location location-usa">
+                        <h2>New York, USA</h2>
+                    </div>
+                </div>
+                <div id="calendar-view" class="calendar-view">
+                    <div class="calendar">
+                        <div class="calendar-control-btn">
+                            <div id="btn-previous" class="calendar-control-btn__previous">
+                                <img src="icons/chevron.svg" />
+                            </div>
+                            <div class="calendar-control-btn__title">
+                                <h2 id="current-month">November</h2>
+                            </div>
+                            <div id="btn-next" class="calendar-control-btn__next">
+                                <img src="icons/chevron.svg" />
+                            </div>
+                        </div>
+                        <div id="calendar-table" class="calendar-table"></div>
+                    </div>
+                    <ul id="time-list" class="time-list"></ul>
+                </div>
+            </div>
+        </section>
+    </main>
+<script src="index.js"></script>
+</body>
+</html>
